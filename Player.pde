@@ -12,7 +12,7 @@ public int x,y,vx,vy,speed;
   public void show(){
   x+= vx;
   y+= vy;
-    fill(256,97,165);
+    fill(255,0,0);
     circle(x,y,50);
   }
   
