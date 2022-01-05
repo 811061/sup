@@ -1,4 +1,5 @@
- Laser[] lasers = new Laser[30000];
+ WallPiece w1;
+ Laser[] lasers = new Laser[100000];
  WallPiece[] wps = new WallPiece[20];
 int lasersFired = 0;
 Player player;
@@ -6,12 +7,17 @@ public void setup() {
   size(400,800);
   player = new Player();
   spawnWallPieces();
+   w1 = new WallPiece((int)(Math.random()*width),(int)(Math.random()*height));
 }
 
 public void draw() {
   background(0);
   if (mousePressed) fireLaser();
   player.show();
+  w1.show(); //call the show method
+  w1.move();
+  w1.attack(w1, player);
+
   for (int i = 0; i < lasers.length; i++) {
     if (lasers[i] != null && lasers[i].active) {
       lasers[i].show();

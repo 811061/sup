@@ -16,6 +16,10 @@ public class WallPiece {
       (int)(Math.random()*256)
     );
   }
+   public void move() {
+    x += vx;
+    y += vy;
+  }
    public void attack(WallPiece w, Player p) {
     chase(p);
     //is the spider close enough to bite?

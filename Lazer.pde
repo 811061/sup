@@ -6,8 +6,8 @@ public class Laser {
   public Laser(PVector pos) {
     this.pos = pos;
     vel = new PVector(mouseX,mouseY);
-    size = new PVector(10,4);
-    c = color(255,0,0);
+    size = new PVector(10,10);
+    c = color(0,256,0);
   }
   
   public void show() {
