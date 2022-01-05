@@ -39,7 +39,7 @@ public void fireLaser() {
 
 public void spawnWallPieces() {
     for (int i = 0; i < wps.length; i++) {
-        wps[i] = new WallPiece((int)random(-100,-50), (int) random(-100,-50)); //cast floats as ints 
+        wps[i] = new WallPiece((int)random(0,400), (int) random(0,800)); //cast floats as ints 
     } 
 }
 
